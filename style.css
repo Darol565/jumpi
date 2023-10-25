@@ -1,13 +1,39 @@
-#webgl_iframe {
-	position: absolute;
-	left: 250px;
-	top: 250px;
-	
-}
+
 /* Genereller Style */
 
+html,body,.container {
+	height: 100%;
+	margin: 0;
+}
 
+.center {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
 	
+
+
+.container {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 1fr 36px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header { 
+	grid-area: header;
+	background-color:white;
+	text-align:center;
+ }
+
+.main { grid-area: main; }
+
+.footer { grid-area: footer; }
 
 
 
@@ -59,40 +85,25 @@ a {
 
 /* Menu Text Anfang */
 
-.Text1 {
-	font-size:auto;
-	font-family:'Muli';
-	
-}
-
-.Text2 {
-	font-size:auto;
-	font-family:'Muli';
-	
-}
 
 /* Menu Text Ende */
 
 /* Header */
 
-.header {
-	background-color:white;
-	
-	text-align:center;
-	
-}
+
 
 /* Footer */
 
 
-footer {
+.footer {
   display:auto;
   background:#2F2C2C;
   text-align:center;
+
   
 } 
 
-footer ul {
+.footer ul {
   display:auto;
   width:100%;
   max-width:980px;
@@ -101,7 +112,7 @@ footer ul {
 
 }
 
-footer ul li {
+.footer ul li {
   display:inline;
   font-size:0.8em;
   line-height:2.8em;
@@ -110,7 +121,7 @@ footer ul li {
 
 }
 
-footer ul li a {
+.footer ul li a {
   color:#E2DBDB;
 
 }
